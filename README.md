@@ -3,8 +3,8 @@
 ## GO FUNDAMENTALS
 
 - [x] Go Environment
-- [ ] Hello, World
-- [ ] Integers
+- [x] Hello, World
+- [x] Integers
 - [ ] Iteration
 - [ ] Arrays and slices
 - [ ] Structs, methods, & interfaces
