@@ -11,7 +11,7 @@ Let's use our TDD skills
 Create a new folder to work in. Create a new file called `sum_test.go` and insert the following:
 
 ```go
-package arrays_and_slices
+package main
 
 import "testing"
 
@@ -43,7 +43,7 @@ If you had initialized go mod with `go mod init main` you will be presented with
 In `sum.go`
 
 ```go
-package arrays_and_slices
+package main
 
 func Sum(numbers [5]int ) int {
 	return 0
@@ -106,7 +106,7 @@ We will now use the slice type which allows us to have collections of any size. 
 `mySlice := []int{1, 2, 3}` rather than `myArray := [3]int{1, 2, 3}`
 
 ```go
-package arrays_and_slices
+package main
 
 import "testing"
 
@@ -154,7 +154,7 @@ The problem here is we can either
 In our case, no one else is using our function, so rather than having two functions to maintain, let's have just one.
 
 ```go
-package arrays_and_slices
+package main
 
 func Sum(numbers []int ) int {
 	sum := 0
@@ -176,7 +176,7 @@ It turns out that fixing the compiler problems were all we need to do here and t
 We already refactored `Sum` - all we did was replace arrays with slices, so no extra changes are required. Remember that we must not neglect our test code in the refactoring stage - we can further improve our `Sum` tests.
 
 ```go
-package arrays_and_slices
+package main
 
 import "testing"
 

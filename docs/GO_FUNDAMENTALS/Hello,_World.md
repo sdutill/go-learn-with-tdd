@@ -128,9 +128,9 @@ Go has a built-in tool, doc, which lets you examine any package installed on you
 
 ```bash
 go doc fmt
-package fmt // import "fmt"
+package main"
 
-Package fmt implements formatted I/O with functions analagous to C's printf and scanf. The format 'verbs' are derived from C's but are simpler.
+package main.
 
 # Printing
 
