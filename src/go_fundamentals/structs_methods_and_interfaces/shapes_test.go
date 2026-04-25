@@ -4,7 +4,7 @@ import "testing"
 
 func TestPerimeter(t *testing.T) {
 	rectangle := Rectangle{Width: 4.0, Height: 7.0}
-	got := Perimeter(rectangle)
+	got := rectangle.Perimeter()
 	want := 22.0
 
 	if got != want {
@@ -13,22 +13,23 @@ func TestPerimeter(t *testing.T) {
 }
 
 func TestArea(t *testing.T) {
-	t.Run("calculate the area of a rectangle", func(t *testing.T) {
-		rectangle := Rectangle{Width: 9.0, Height: 12.0}
-		got := Area(rectangle)
-		want := 108.0
 
-		if got != want {
-			t.Errorf("got %g want %g", got, want)
-		}
-	})
-	t.Run("calculate the area of a circle", func(t *testing.T) {
-		circle := Circle{Radius: 10.0}
-		got := Area(circle)
-		want := 314.1592653589793
+	areaTests := []struct {
+		name string
+		shape Shape
+		hasArea float64
+	}{
+		{name:"Rectangle", shape: Rectangle{Height: 9,Width: 12}, hasArea: 108.0},
+		{name:"Circle", shape: Circle{Radius: 10}, hasArea: 314.1592653589793},
+		{name:"Rectangle", shape: Triangle{Base: 12, Height: 6}, hasArea: 36.0},
+	}
 
-		if got != want {
-			t.Errorf("got %g want %g", got, want)
-		}
-	})
+	for _, tt := range areaTests {
+		// using tt.name from the case to use it as the `t.Run` test name
+		t.Run(tt.name, func(t *testing.T) {
+			got := tt.shape.Area()
+			if got != tt.hasArea {
+				t.Errorf("%#v got %g hasArea %g", tt.shape,  got, tt.hasArea)
+			}})
+	}
 }
