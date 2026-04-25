@@ -5,8 +5,8 @@
 - [x] Go Environment
 - [x] Hello, World
 - [x] Integers
-- [ ] Iteration
-- [ ] Arrays and slices
+- [x] Iteration
+- [x] Arrays and slices
 - [ ] Structs, methods, & interfaces
 - [ ] Pointers & errors
 - [ ] Maps

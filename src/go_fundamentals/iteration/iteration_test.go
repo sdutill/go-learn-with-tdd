@@ -6,7 +6,7 @@ import (
 )
 
 func TestRepeat(t *testing.T) {
-    repeated := Repeat("a", 25)
+	repeated := Repeat("a", 25)
 	expected := "aaaaaaaaaaaaaaaaaaaaaaaaa"
 
 	if repeated != expected {
@@ -16,13 +16,12 @@ func TestRepeat(t *testing.T) {
 
 // Laughs repeatedly
 func ExampleRepeat() {
-    fmt.Println(Repeat("he", 4))
+	fmt.Println(Repeat("he", 4))
 	// Output: hehehehe
 }
 
-
 func BenchmarkRepeat(b *testing.B) {
-    for b.Loop() {
-        Repeat("a", 25)
-    }
+	for b.Loop() {
+		Repeat("a", 25)
+	}
 }
