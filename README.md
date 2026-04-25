@@ -7,7 +7,7 @@
 - [x] Integers
 - [x] Iteration
 - [x] Arrays and slices
-- [ ] Structs, methods, & interfaces
+- [x] Structs, methods, & interfaces
 - [ ] Pointers & errors
 - [ ] Maps
 - [ ] Dependency Injection
