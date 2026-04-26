@@ -11,7 +11,7 @@
 - [x] Pointers & erorrs
 - [x] Maps
 - [x] Dependency Injection
-- [ ] Mocking
+- [x] Mocking
 - [ ] Concurrency
 - [ ] Select
 - [ ] Reflection
