@@ -9,7 +9,7 @@ There's nothing new so far, so try and write it yourself for practice.
 ## Write the test first
 
 ```go
-package iteration
+package main
 
 import "testing"
 
@@ -45,7 +45,7 @@ All you need to do right now is enough to make it compile so you can check your 
 The `for` syntax is very unremarkable and follow most C-like languages.
 
 ```go
-package iteration
+package main
 
 func Repeat(character string) string {
 	var repeated string

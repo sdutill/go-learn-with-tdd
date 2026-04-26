@@ -11,7 +11,7 @@ Let's make a `Wallet` struct which lets us deposit `Bitcoin`.
 ## Write the test first
 
 ```go
-package pointers_and_errors
+package main
 
 import "testing"
 
@@ -59,7 +59,7 @@ We need to define those methods.
 Remember to only do enough to make the tests run. We need to make sure our test fails correctly with clear error message.
 
 ```go
-package pointers_and_errors
+package main
 
 type Wallet struct{}
 
@@ -97,7 +97,7 @@ In our case we want our methods to be able to manipulate this value, but no one 
 Remember we can access the internal `balance` field in the struct using the "receiver" variable.
 
 ```go
-package pointers_and_errors
+package main
 
 type Wallet struct {
 	balance float64
@@ -175,7 +175,7 @@ You can see that the addresses of the two balances are different. So when we cha
 We can fix this with _pointers_. Pointers let us _point_ to some values and then let us change them. So rather than taking a copt of the whole Wallet, we instead take a pointer to that wallet so that we can change the original values within it.
 
 ```go
-package pointers_and_errors
+package main
 
 import "fmt"
 
@@ -218,7 +218,7 @@ Go lets you create new types from existing ones.
 The syntax is `type MyName OriginalType`
 
 ```go
-package pointers_and_errors
+package main
 
 import "fmt"
 

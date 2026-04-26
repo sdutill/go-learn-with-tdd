@@ -23,7 +23,7 @@ learnGoWithTests
 ## Write the test first
 
 ```go
-package integers
+package main
 
 import "testing"
 
@@ -53,7 +53,7 @@ Inspect the compilation error
 Write enough code to satisfy the compiler _and that's all_ - remember we want to check that our tests fail for the correct reason.
 
 ```go
-package integers
+package main
 
 func Add(x, y int) int {
     return 0

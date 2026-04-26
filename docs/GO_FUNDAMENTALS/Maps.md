@@ -36,7 +36,7 @@ By running go test the compiler will fail with `./dictionary_test.go:8:9: undefi
 ## Write the minimal amount of code for the test to run and check the output
 
 ```go
-package maps
+package main
 
 func Search(dictionary map[string]string, key string) string {
 	return ""
@@ -53,7 +53,7 @@ Your test should now fail with a _clear error message_
 ## Write enough code to make it pass
 
 ```go
-package maps
+package main
 
 func Search(dictionary map[string]string, word string) string {
 	return dictionary[word]
@@ -113,7 +113,7 @@ We started using the `Dictionary` type, which we have not defined yet. Then call
 In `dictionary.go`:
 
 ```go
-package maps
+package main
 
 type Dictionary map[string]string
 

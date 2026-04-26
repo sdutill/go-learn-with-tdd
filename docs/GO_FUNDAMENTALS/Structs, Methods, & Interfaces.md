@@ -7,7 +7,7 @@ The TDD cycle should be pretty familiar to you by now.
 ## Write the test first
 
 ```go
-package shapes
+package main
 
 import "testing"
 
@@ -32,7 +32,7 @@ FAIL    github.com/sdutill/go-learn-with-tdd/src/go_fundamentals/structs_methods
 ## Write the minimal amount of code for the test to run and check the failing test output
 
 ```go
-package shapes
+package main
 
 func Perimeter(length, width float64) float64 {
 	return 2.2
@@ -43,7 +43,7 @@ func Perimeter(length, width float64) float64 {
 ## Write enough code to make it pass
 
 ```go
-package shapes
+package main
 
 func Perimeter(length, width float64) float64 {
 	return 2 * (length + width)
@@ -55,7 +55,7 @@ So far, so easy. Now let's create a function called `Area(width, height float64)
 You should end up with tests like this
 
 ```go
-package shapes
+package main
 
 import "testing"
 
@@ -81,7 +81,7 @@ func TestArea(t *testing.T) {
 And code like this
 
 ```go
-package shapes
+package main
 
 func Perimeter(length, width float64) float64 {
 	return 2 * (length + width)
@@ -120,7 +120,7 @@ type Rectangle struct {
 Now let's refactor the tests to use `Rectangle instead of plain `float64`s.
 
 ```go
-package shapes
+package main
 
 import "testing"
 
@@ -163,7 +163,7 @@ You can access the fields of a struct with the syntax of `myStruct.field`.
 Change the two functions to fix the test.
 
 ```go
-package shapes
+package main
 
 type Rectangle struct {
 	Width  float64
@@ -350,7 +350,7 @@ FAIL
 Now let's make our tests pass by fixing our new method
 
 ```go
-package shapes
+package main
 
 import "math"
 
@@ -515,7 +515,7 @@ FAIL    github.com/sdutill/go-learn-with-tdd/src/go_fundamentals/structs_methods
 ## Write the minimal amount of code for the test to run and check the failing test output
 
 ```go
-package shapes
+package main
 
 import "math"
 
